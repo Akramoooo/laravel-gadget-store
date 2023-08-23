@@ -1,0 +1,14 @@
+.add-prod-container{
+    margin: 10px;
+    margin-inline: 0;
+    padding: 20px;
+    display: inline-block;
+}
+
+.add-prod-container>a{
+    text-decoration: none;
+    background: linear-gradient(180deg, #EF0404 0%, #FB3A3A 0%, #DF50E4 100%);
+    color: black;
+    padding:10px;
+    border: 1px solid black;
+}

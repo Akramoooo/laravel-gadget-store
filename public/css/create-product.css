@@ -1,0 +1,90 @@
+
+
+.create-prod-container>form{
+    display: inline-block;
+}
+
+
+.create-prod-container>form>div>input,textarea,select{
+    width: 100%;
+    border: none;
+    height: 4em;
+    font-size: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align:initial;
+    border-radius: 5px;
+    
+}
+
+.create-prod-container>form>div>textarea{
+    padding-bottom: 60px;
+}
+
+.create-prod-container>form>div{
+    text-align: left;
+}
+
+.create-prod-container>form>div>label{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.create-prod-container>form>div>label>span{
+    color: rgb(255, 0, 0)
+}
+
+.create-prod-container>form>div>input[type="file"]{
+    background-color: aliceblue;
+    cursor: pointer;
+}
+.create-prod-container>form>div>input[type="checkbox"]{
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+
+.remember{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.create-prod-container{
+    text-align: center;
+}
+
+.create-prod-container>form>div{
+    margin: 10px;
+    margin-inline: 0;
+    width: 500px;
+}
+
+.create-prod-container>form>div>h3{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: rgb(34, 33, 33)
+}
+
+.prod-create-btn>button{
+    padding: 10px;
+    padding-inline: 50px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+
+}
+
+.prod-create-btn>button:hover{
+    background-color: rgb(245, 75, 75);
+}
+
+.prod-create-btn>button:active{
+    background-color: rgb(235, 42, 219);
+}
+
+.error-container{
+    background-color: brown;
+    padding: 10px;
+    padding-inline: 0;
+    border-radius: 5px;
+}
