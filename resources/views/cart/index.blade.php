@@ -3,9 +3,8 @@
 @section('title', 'Корзина')
 
 @section('content')
-@php($count = 0)
 <div class="main-cart-container">
-    @if($products !== null)
+    @if(!empty($products))
     @foreach($products as $product)
     <div class="cart-container">
         <div class="cart-info">
@@ -22,7 +21,6 @@
             </div>
         </div>
     </div>
-    @php($count+=$product->price)
     @endforeach
     @else
     <div style="text-align: center;">
@@ -30,11 +28,6 @@
     </div>
     @endif
 
-    <div style="text-align:center; margin:10px; margin-inline:0;">
-        <div style="display: inline-block;">
-            <h3>Итого: {{ $count }}</h3>
-        </div>
-    </div>
 </div>
 
 @endsection
@@ -45,15 +38,16 @@
     $(document).ready(function() {
         $('.del').click(function() {
             var delElement = $(this).val();
-            var productElement = $(this).closest('.product');
+            var amountEl = $('.amount').text();
+            var product = $(this).closest('.cart-container')
             $.ajax({
                 url: "{{ route('cart.delProd', ':delElement') }}".replace(':delElement', delElement),
                 method: 'get',
                 data: {
                     delElement: delElement
                 },
-                success: function(data) {
-
+                success: function() {
+                    product.remove();
                 }
             });
         });

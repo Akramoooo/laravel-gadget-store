@@ -14,13 +14,14 @@ class CartContoller extends Controller
     {
 
         $orders = Order::with('product')->where('user_id', auth()->id())->get();
-
+        $products = [];
         if ($orders !== null) {
             foreach ($orders as $order) {
                 $products[] = $order->product;
             }
+        }else{
+            $products = [];
         }
-        $products = null;
 
         return view('cart.index', compact('products'));
     }
