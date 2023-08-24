@@ -1,6 +1,7 @@
 
 .oneProdCart>img{
-    width: 200px;
+    width: 300px;
+    height: 250px;
     margin: 10px;
 }
 
@@ -24,13 +25,14 @@
     margin-top: 20px;
 }
 
-.cart-btns>a{
+.cart-btns>button{
     border: 1px solid black;
     margin: 8px;
     text-decoration: none;
     border-radius: 10px;
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     padding: 10px;
+    cursor: pointer;
 }
 
 .cart-btns{
