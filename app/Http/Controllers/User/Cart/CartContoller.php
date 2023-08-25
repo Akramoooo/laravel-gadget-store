@@ -26,6 +26,14 @@ class CartContoller extends Controller
         return view('cart.index', compact('products'));
     }
 
+    public function addProduct($product_id){
+        $order = Order::create([
+            'user_id' => auth()->id(),
+            'product_id' => $product_id
+        ]);
+
+    }
+
     public function delProd($product_id)
     {
         $order = Order::where('user_id', auth()->id())->where('product_id', $product_id);

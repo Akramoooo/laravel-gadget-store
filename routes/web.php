@@ -32,6 +32,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
 Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => 'user'], function () {
     Route::group(['namespace' => 'Cart', 'prefix' => 'cart'], function () {
         Route::get('/index', [CartContoller::class, 'index'])->name('cart.index');
+        Route::get('/add-prod-in-my-cart/{product_id}', [CartContoller::class, 'addProduct'])->name('cart.addProd');
         Route::get('/delete-product/{product_id}', [CartContoller::class, 'delProd'])->name('cart.delProd');
     });
     Route::group(['namespace' => 'Profile', 'prefix' => 'profile'], function () {
