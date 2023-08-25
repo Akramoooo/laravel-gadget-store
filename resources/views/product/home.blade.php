@@ -27,8 +27,8 @@
                 <p>Цена: {{ $product->price }}</p>
                 <p><a href="#">Подробнее...</a></p>
                 <div class="product_btns" style="display: flex; flex-direction:row;">
-                    <p><a href="#" class="in_cart">В корзину</a></p>
-                    <p><a href="#" class="buy">Купить</a></p>
+                    <button class="in_cart" value="{{ $product->id }}">В корзину</button>
+                    <button class="buy">Купить</button>
                 </div>
         </div>
         @endforeach
@@ -42,15 +42,14 @@
 @endsection
 
 <style>
-    .product_btns p {
-        margin-inline: 10px;
-    }
-
-    .product_btns p>a {
+    .product_btns>button {
         border: 1px solid black;
         text-decoration: none;
         font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
         border-radius: 3px;
+        margin-inline: 10px;
+        cursor: pointer;
+        padding: 10px;
     }
 
 
@@ -65,3 +64,26 @@
     }
 </style>
 
+@section('includes')
+
+<script>
+    $(document).ready(function() {
+        $('.in_cart').click(function() {
+            var elProduct = $(this).val();
+            $(this).prop('disabled', true);
+            var buttonElement = $(this);
+            $.ajax({
+                url: "{{ route('cart.addProd', ':elProduct') }}".replace(':elProduct', elProduct),
+                method: 'get',
+                data: {
+                    elProduct: elProduct
+                },
+                success: function() {
+                    buttonElement.text('Добавлено');
+                }
+            });
+        })
+    });
+</script>
+
+@endsection
