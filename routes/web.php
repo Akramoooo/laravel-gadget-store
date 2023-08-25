@@ -29,7 +29,7 @@ Route::group(['namespace' => 'App\Http\Controllers\Auth'], function () {
     Route::post('/authorize', [LogController::class, 'loginer'])->name('loginer');
 });
 
-Route::group(['namespace' => 'App\Http\Controllers\User', 'prefix' => 'user'], function () {
+Route::group(['namespace' => 'App\Http\Controllers\User', 'middleware' => 'auth','prefix' => 'user'], function () {
     Route::group(['namespace' => 'Cart', 'prefix' => 'cart'], function () {
         Route::get('/index', [CartContoller::class, 'index'])->name('cart.index');
         Route::get('/add-prod-in-my-cart/{product_id}', [CartContoller::class, 'addProduct'])->name('cart.addProd');

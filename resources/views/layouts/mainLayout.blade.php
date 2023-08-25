@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{{ asset('css\create-product.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css\cart.css') }}">
   <link rel="stylesheet" type="text/css" href="{{ asset('css\prod_filter.css') }}">
+  <link rel="stylesheet" type="text/css" href="{{ asset('css\profile.css') }}">
   <meta name="csrf-token" content="{{ csrf_token() }}">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
   <title>@yield('title')</title>
