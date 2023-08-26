@@ -12,7 +12,7 @@
         </div>
         <div class="prof-info">
             <p>{{ $user->name }}</p>
-            <p>Активный</p>
+            <p>{{ $user->isActive ? 'Активный' : 'Не активный'}}</p>
             <p>{{ $user->role }}</p>
         </div>
     </div>

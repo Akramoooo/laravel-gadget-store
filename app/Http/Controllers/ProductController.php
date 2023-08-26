@@ -35,7 +35,7 @@ class ProductController extends Controller
     {
         $data = $request->validated();
         $image = $request->file('image');
-        $filename = $this->imageService->makeImg($image,'prod_images');
+        $filename = $this->imageService->makeImg($image, 'prod_images');
         unset($data['image']);
         $data['image'] = $filename;
         Product::create($data);
@@ -45,22 +45,18 @@ class ProductController extends Controller
 
     public function show()
     {
-
     }
 
 
     public function edit()
     {
-
     }
 
     public function update()
     {
-
     }
 
     public function delete()
     {
-
     }
 }
