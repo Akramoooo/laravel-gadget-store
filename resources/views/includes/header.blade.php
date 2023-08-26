@@ -22,12 +22,6 @@
                     <li>
                         <a href="{{ route('main')}}">Главная</a>
                     </li>
-                    <li>
-                        <a href="#">Форум</a>
-                    </li>
-                    <li>
-                        <a href="#">О нас</a>
-                    </li>
 
                 </ul>
             </div>
@@ -35,8 +29,6 @@
 
         <div class="left-panel">
             <a href="{{ route('main')}}">Главная</a>
-            <a href="#">Форум</a>
-            <a href="#">О нас</a>
             <a href="{{ route('product.home')}}">Товар</a>
         </div>
         <div class="right-panel">

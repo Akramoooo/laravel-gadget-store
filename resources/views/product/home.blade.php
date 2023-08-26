@@ -14,7 +14,7 @@
             <div class="filter_list">
                 <ul>
                     @foreach($categories as $category)
-                    <li class="filter-btn" data-order="{{ $category->title }}"><span>{{ $category->title }}</span></li>
+                    <li class="filter-btn" data-order="{{ $category->id }}"><span>{{ $category->title }}</span></li>
                     @endforeach
                 </ul>
             </div>
